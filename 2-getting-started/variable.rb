@@ -11,3 +11,5 @@ puts age
 puts age + 5
 
 puts name + " " + last_Name
+
+puts "#{name} #{last_Name} is #{age} years old"

@@ -1,0 +1,13 @@
+What is a Variable?
+
+Variable is a reference to an object. That object is subject to change.
+
+Variable are sometimes called pointer or identifiers.
+
+Ruby is dynamically typed. Variables types do not have to be declared. The same variable can be reassigned to an object of another data type.
+
+Variable Syntax
+name = "Emmanuel"
+Last_Name = "Paskhaver"
+handsome = true
+age = 24 + 1

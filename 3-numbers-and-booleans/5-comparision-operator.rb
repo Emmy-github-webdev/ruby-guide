@@ -14,3 +14,13 @@ p "5" == 5 #false
 p "5" == "5" #true
 
 # != not equal to
+
+p 10.5.floor
+p 10.5.ceil
+
+p 3.143569.round
+p 3.143569.round(2)
+p 3.143569.round(3)
+
+p 4.56.abs
+p -4.56.abs

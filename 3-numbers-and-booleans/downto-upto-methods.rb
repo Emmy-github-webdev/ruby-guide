@@ -11,3 +11,10 @@ puts
 5.upto(10) do |number|
   puts "We are in number #{number}"  
 end
+
+puts
+
+
+5.step(100, 5) do |number|
+  puts "We are in number #{number}"  
+end

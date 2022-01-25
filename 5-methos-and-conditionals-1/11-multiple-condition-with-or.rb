@@ -5,3 +5,4 @@ mood = "happy"
 if budget > price || mood == "happy"
   puts "I am going to buy the item"  
 end
+

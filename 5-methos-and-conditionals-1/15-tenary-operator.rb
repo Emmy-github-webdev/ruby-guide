@@ -18,3 +18,10 @@ puts even_or_odd(9)
 #Assignment
 pokemon = "Pikachu"
 puts pokemon == "Charizard" ? "Fireball" : "That is not Charizard"
+
+def check_pokemon(pokemon)
+  pokemon == "Charizard" ? "Fireball" : "That is not Charizard"
+end
+
+p check_pokemon("Li")
+p check_pokemon("Charizard")

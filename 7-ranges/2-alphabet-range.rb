@@ -21,3 +21,7 @@ p letters === "o" #false
 counts = 20 .. 50
 p counts.include?(40)
 p counts.include?(61)
+
+#rand method
+
+puts rand(0..1000000) #generate a random number between 0 and 1000000

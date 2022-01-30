@@ -1,3 +1,4 @@
+# A mixin is a module that injects additional behavior into a class.
 # A module is a toolbox or container of methods and constanats.
 
 module Square

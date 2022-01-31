@@ -1,0 +1,1 @@
+OOP is a programming paradigm that uses objects and their interactions to design and program applications.

@@ -1,4 +1,7 @@
+require_relative "module"
+
 class Student
+  include Crud
   attr_accessor :first_name, :last_name, :email, :username, :password
 
   def initialize(first_name, last_name, email, username, password)
@@ -16,6 +19,7 @@ end
 
 student1 = Student.new("Emmanuel", "Ogah", "Emmanuel.ogah@example.com", "Emmanuel1", "123")
 student2 = Student.new("John", "Doe", "john.doe@example.com", "john1", "123")
-puts student1
-puts
-puts student2
+
+hashed_password = student1.create_hash_digest(student1.password)
+
+puts hashed_password

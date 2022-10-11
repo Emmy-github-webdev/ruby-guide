@@ -1,6 +1,6 @@
 # Ruby Interview Questions
 
-1. How do you remove nil values in array using Ruby?
+1. How do you remove **nil** values in array using Ruby?
   - Ans: When you want to remove **nil** elements from Ruby array, you can use two methods: _compact_ or _compact!_. They both remove **nil** elements but, _compact!_ removes them permanently.
 
   ```
@@ -23,7 +23,7 @@
   puts "#{arr4}"
   ```
 
-2. What is the difference between extend and include in Ruby?
+2. What is the difference between **extend** and **include** in Ruby?
   - Ans: **include** is used to importing module code. While **extend** is also used to importing module code but, extend import them as a class methods. 
   - including Geek in Lord gives instances of Lord access to Geek's methods
 
@@ -53,4 +53,9 @@
   end
   ```
 
-3. 
+3. What do we need to test in controllers Ruby?
+  - Ans: The http requests (Get, Post, Delete, Put)
+
+
+4. What is the difference between **SQL Injection** and **css Injection?**
+  - Ans: **CSS injection** means that an attacker manages to upload malicious CSS code to your website which will run on your visitors browsers. **SQL injection** attacks are used to steal information from databases. **XSS attacks** are used to redirect users to websites where attackers can steal data from them. SQL injection is data-base focused whereas XSS is geared towards attacking end users.

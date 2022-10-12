@@ -59,3 +59,27 @@
 
 4. What is the difference between **SQL Injection** and **css Injection?**
   - Ans: **CSS injection** means that an attacker manages to upload malicious CSS code to your website which will run on your visitors browsers. **SQL injection** attacks are used to steal information from databases. **XSS attacks** are used to redirect users to websites where attackers can steal data from them. SQL injection is data-base focused whereas XSS is geared towards attacking end users.
+
+5. Describe the difference between **class** and **instance variables** ruby?
+
+  - Ans: The main difference is the behavior concerning inheritance.Class variables are shared between the class and all its subclasses, while class instance variables only belong to one specific class.
+
+  ```
+  class Woof
+
+  @@sound = "woof"
+
+  def self.sound
+    @@sound
+  end
+end
+
+Woof.sound  # => "woof"
+
+class LoudWoof < Woof
+  @@sound = "WOOF"
+end
+
+LoudWoof.sound  # => "WOOF"
+Woof.sound      # => "WOOF" (!)
+  ```

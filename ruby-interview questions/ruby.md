@@ -232,3 +232,9 @@
 
 9. What is the difference between a **class** and a **module**
   - Ans: Modules are collections of methods and constants. They cannot generate instances. Classes may generate instances (objects), and have per-instance state (instance variables)
+
+10. What are your favourite tools for wriring unit tests and why?
+  - Ans: My favourite tools for writing unit tests are **RSpec**, RSpec created for behavior-driven development (BDD). It is the most frequently used testing library for Ruby in production applications. 
+
+11. What is **Assets Pipeline?** 
+  - Ans: Asset Pipeline provides a framework to concatenate and minify or compress JavaScript and CSS assets.

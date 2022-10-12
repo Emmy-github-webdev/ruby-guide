@@ -178,3 +178,6 @@
     cat3 = Cat.new("felix", 2)
     => #<Cat:0x009frbaa8V76 @name="felix", @age=2>
     ```
+7. What is **RubyGem?** How does it work?
+
+  - Ans: The RubyGems software allows you to easily download, install, and use ruby software packages on your system. The software package is called a “gem” which contains a packaged Ruby application or library.

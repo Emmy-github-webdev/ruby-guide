@@ -229,3 +229,6 @@
   ```
 
   - **mixins:** are modules that we include in classes where they are needed. One characteristic of Ruby is that it implements the single inheritance mechanism, which means that a class can only inherit from one other class. But this is doable by using the mixins.
+
+9. What is the difference between a **class** and a **module**
+  - Ans: Modules are collections of methods and constants. They cannot generate instances. Classes may generate instances (objects), and have per-instance state (instance variables)

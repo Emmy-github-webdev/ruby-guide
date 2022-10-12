@@ -67,19 +67,114 @@
   ```
   class Woof
 
-  @@sound = "woof"
+    @@sound = "woof"
 
-  def self.sound
-    @@sound
+    def self.sound
+      @@sound
+    end
   end
-end
 
-Woof.sound  # => "woof"
+  Woof.sound  # => "woof"
 
-class LoudWoof < Woof
-  @@sound = "WOOF"
-end
+  class LoudWoof < Woof
+    @@sound = "WOOF"
+  end
 
-LoudWoof.sound  # => "WOOF"
-Woof.sound      # => "WOOF" (!)
-  ```
+  LoudWoof.sound  # => "WOOF"
+  Woof.sound      # => "WOOF" (!)
+    ```
+6. What are the three levels of access control for ruby methods?
+    - Ans - **Public Methods** describe the behavior of the project being created. These methods can be called from outside the scope of the created object.
+
+    ```
+      class Cat
+      def initialize(name)
+        @name = name
+      end
+
+      def speak
+        puts "I'm #{@name} and I'm 2 years old"
+      end
+      
+      ...
+    end
+
+    new_cat = Cat.new("garfield")
+    #=> <Cat:0x2321868 @name="garfield">
+    
+    new_cat.speak
+    #=> I'm garfield and I'm 2 years old
+    ```
+    **Public** keyword is unnecessary, but can be used to escape **private** or **protected**
+    ```
+    def MyClass
+      def first_public_method
+      end
+
+      private
+
+      def private_method
+      end
+
+      public
+
+      def second_public_method
+      end
+    end
+    ```
+    - **Private Method** are not accessible from outside of the object. They are used internally by the object.
+    ```
+    class Cat
+      def initialize(name)
+        @name = name
+      end
+
+      def speak
+        age = calculate_cat_age # here we call the private method 
+        puts "I'm #{@name} and I'm #{age} years old"
+      end
+
+      private
+        def calculate_cat_age
+          2 * 3 - 4 
+        end
+    end
+
+    my_cat = Cat.new("Bilbo")
+    my_cat.speak #=> I'm Bilbo and I'm 2 years old
+    my_cat.calculate_cat_age #=> NoMethodError: private method `calculate_cat_age' called for #<Cat:0x2321868 @name="Bilbo">
+    ```
+    - **Protected Methods** are very similar to private methods. They cannot be accessed outside the instance of object in the same way private methods can't be. However, using the _self_ ruby method, protected methods can be called within the context of an object of the same type.
+
+    ```
+    class Cat
+      def initialize(name, age)
+        @name = name
+        @age = age
+      end
+
+      def speak
+        puts "I'm #{@name} and I'm #{@age} years old"
+      end
+
+      # this == method allows us to compare two objects own ages. 
+      # if both Cat's have the same age they will be considered equal.
+      def ==(other)
+        self.own_age == other.own_age
+      end
+
+      protected
+        def own_age
+            self.age
+        end
+    end
+
+    cat1 = Cat.new("ricky", 2)
+    => #<Cat:0x007fe2b8aa4a18 @name="ricky", @age=2>
+
+    cat2 = Cat.new("lucy", 4)
+    => #<Cat:0x008gfb7aa6v67 @name="lucy", @age=4>
+
+    cat3 = Cat.new("felix", 2)
+    => #<Cat:0x009frbaa8V76 @name="felix", @age=2>
+    ```

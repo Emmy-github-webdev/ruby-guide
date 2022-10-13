@@ -326,3 +326,42 @@
 15. Why do we need to use **HTTPS** instead of **HTTP**?
 
   - Ans: HTTPS is HTTP with encryption and verification. The only difference between the two protocols is that HTTPS uses TLS (SSL) to encrypt normal HTTP requests and responses, and to digitally sign those requests and responses. As a result, HTTPS is far more secure than HTTP.
+
+16. How would you declare and use a **constructor** in Ruby?
+  - Ans: A constructor is a special method of the class which gets automatically invoked whenever an instance of the class is created.
+
+  ```
+  # Ruby program to initialize instance
+  # variable using constructor
+  
+  #!/usr/bin/ruby
+  
+  # class name
+  class Geeks
+      
+      # constructor
+      def initialize
+          
+          # instance variable initialization
+          @inst_1 = "GeeksforGeeks"
+          @inst_2 = "Sudo Placement"
+      end
+      
+      # display method
+      def display
+          puts "Value of First instance variable is: #{@inst_1}"
+          puts "Value of Second instance variable is: #{@inst_2}"
+      end
+  end
+  
+  # creating object
+  obj1 = Geeks.new()
+  
+  # calling display method
+  obj1.display()
+
+  Output
+
+  Value of First instance variable is: GeeksforGeeks
+  Value of Second instance variable is: Sudo Placement
+  ```

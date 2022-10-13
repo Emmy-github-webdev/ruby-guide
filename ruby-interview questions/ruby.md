@@ -369,3 +369,27 @@
 
   - Ans: Searching, sorting, and filtering in Rails controllers can be. ElasticSearch and Solar are great, high-powered solutions, but are really big depencies for small app. Rails includes scopes which can provide you with a lot of what you need for simple searching, filtering and sorting. If you take advantage of scope chaining, you can build the features you want without taking on big dependencies.
 
+18. What does **[self](https://www.rubyguides.com/2020/04/self-in-ruby/)** mean in Ruby?
+
+  - Ans: **Self** gives you access to the current object. It is a special variable that points the object that own the currently executing code.
+
+  ```
+  class Example
+    def do_something
+      banana = "variable"
+
+      puts banana
+      puts self.banana
+    end
+
+    def banana
+      "method"
+    end
+  end
+
+  Example.new.do_something
+
+  # "variable"  => puts banana
+  # "method"    => puts self.banana
+  ```
+

@@ -365,3 +365,7 @@
   Value of First instance variable is: GeeksforGeeks
   Value of Second instance variable is: Sudo Placement
   ```
+17. How should you use [filters in controllers](https://www.justinweiss.com/articles/search-and-filter-rails-models-without-bloating-your-controller/)?
+
+  - Ans: Searching, sorting, and filtering in Rails controllers can be. ElasticSearch and Solar are great, high-powered solutions, but are really big depencies for small app. Rails includes scopes which can provide you with a lot of what you need for simple searching, filtering and sorting. If you take advantage of scope chaining, you can build the features you want without taking on big dependencies.
+

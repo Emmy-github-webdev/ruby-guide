@@ -263,3 +263,53 @@
 
   www.geeksforgeeks.org
   ```
+13. What is the difference between calling **super** and calling **super()**?
+
+  - Ans: **Super** calls a method on the parent class with the same name as the method that calls **super**. If you call a method named **i_like_chocolate_**, and then you call **super** within that method, Ruby will try to find another method with that same name on the parent class of whoever owns this method. If the method doesn’t exist it will trigger a NoMethodError exception, and if a method_missing is found it will use that. **Super** equals **super(*args)**, which brings all arguments to the inherited method. **Super()** is used when you just want to call the method inherited from the parent class without passing arguments.
+
+  ```
+  class Animal
+    def eat
+    puts "eating"
+    end
+  end
+
+  class Dog < Animal
+    def eat
+      # calls super here
+      super
+    end
+  end
+
+  doggy = Dog.new
+  p doggy.eat # "eating"
+  ```
+  _Wait, ArgumentError?_ Things start to get messy when we decide to explicitly pass arguments to super:
+  ```
+  class Animal
+    def eat(food)
+      puts "eating #{food}"
+    end
+  end
+
+  class Dog < Animal
+    def eat(food1, food2)
+      # super without declaring args
+      super
+      puts "eating #{food2} as well"
+    end
+  end
+
+  class Cat < Animal
+    def eat(food1, food2)
+      # super with args
+      super(food1)
+      puts "eating #{food2} as well"
+    end
+  end
+
+  doggy = Dog.new
+  kitty = Cat.new
+  doggy.eat("bento", "sushi") # "ArgumentError: (given 2, expected 1)"
+  kitty.eat("bento", "sushi") # "eating bento" & "eating sushi as well"
+  ```

@@ -234,7 +234,7 @@
   - Ans: Modules are collections of methods and constants. They cannot generate instances. Classes may generate instances (objects), and have per-instance state (instance variables)
 
 10. What are your favourite tools for wriring unit tests and why?
-  - Ans: My favourite tools for writing unit tests are **RSpec**, RSpec created for behavior-driven development (BDD). It is the most frequently used testing library for Ruby in production applications. 
+  - Ans: My favourite tools for writing unit tests are **RSpec for Ruby**, RSpec created for behavior-driven development (BDD). It is the most frequently used testing library for Ruby in production applications. **Jest for JavaScript**, **React Testing Library for React**, **capybara for Rails**
 
 11. What is **Assets Pipeline?** 
   - Ans: Asset Pipeline provides a framework to concatenate and minify or compress JavaScript and CSS assets.
@@ -397,3 +397,37 @@
 
 20. what is [unit testing](https://dev.to/milandhar/unit-testing-in-rails-4oke) (in classical term)?
   - Ans: Unit testing is a testing method where individual units of source code, program modules, usage procedures, and operating procedures are tested to determine if they are fit for use. 
+
+21. What is the difference between the Object methods [**clone** and **dup**](https://www.rubyguides.com/2018/11/dup-vs-clone/)?
+
+  - Ans: While clone copy or duplicate an object, including the internal state.
+
+  ```
+  a = [1,2,3,4,5]
+
+  a[1..-1]
+  # [2,3,4,5]
+  ```
+  Another way
+  ```
+  b = a.clone
+
+  b.shift
+  # [1]
+
+  b
+  # [2,3,4,5]
+  ```
+  While dup do not copy the object attribute
+
+  ```
+  a = Object.new.freeze
+
+  b = a.dup
+  b.frozen?
+  # false
+
+  b = a.clone
+  b.frozen?
+  # true
+  ```

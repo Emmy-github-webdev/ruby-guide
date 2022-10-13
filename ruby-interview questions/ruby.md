@@ -238,3 +238,28 @@
 
 11. What is **Assets Pipeline?** 
   - Ans: Asset Pipeline provides a framework to concatenate and minify or compress JavaScript and CSS assets.
+12. How would you create **getter** and **setter** methods in Ruby?
+  - Ans: Ruby provides **getter** and **setter** methods to ease to access the variables of the class. Getter methods are used to get the data from the variables of the classes and whereas setter methods are used to set the data of the variables of the classes. They can both be used for both instance and class variables.
+  ```
+  class CSWebsite
+  
+    # Constructor to initialize
+    # the class with a name
+    # instance variable
+    def initialize(website)
+      @website = website
+    end
+    
+    # Classical get method
+    def website
+      @website
+    end
+  end
+    
+  # Creating an object of the class
+  gfg = CSWebsite.new "www.geeksforgeeks.org"
+  puts gfg.website
+  Output :
+
+  www.geeksforgeeks.org
+  ```

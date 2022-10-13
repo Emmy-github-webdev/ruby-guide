@@ -322,3 +322,7 @@
   2. **ActionDispatch::Session::CacheStore** - stores data in the Rails cache
   3. **ActionDispatch::Session::ActiveRecordStore** - stores data in the database using Active Record.
   1. **ActionDispatch::Session::MemCacheStore** - stores data in memcached cluster
+
+15. Why do we need to use **HTTPS** instead of **HTTP**?
+
+  - Ans: HTTPS is HTTP with encryption and verification. The only difference between the two protocols is that HTTPS uses TLS (SSL) to encrypt normal HTTP requests and responses, and to digitally sign those requests and responses. As a result, HTTPS is far more secure than HTTP.

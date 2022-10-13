@@ -392,4 +392,5 @@
   # "variable"  => puts banana
   # "method"    => puts self.banana
   ```
-
+19. Explain how (almost) [everything is an object in Ruby](https://dev.to/craigbrad/everything-is-an-object-5184)?
+  - Ans: Almost everything in ruby is an object. Every data type that we work with is a class and classes are objects. Even the Object class is an object. Strings, integers, floats, hashes, arrays, symbols, classes, modules, errors and more are all objects. Open up an irb console and see for yourself, there are some really interesting observations to make.

@@ -313,3 +313,12 @@
   doggy.eat("bento", "sushi") # "ArgumentError: (given 2, expected 1)"
   kitty.eat("bento", "sushi") # "eating bento" & "eating sushi as well"
   ```
+14. What is **sessions mechanism** in ruby?
+
+  - Ans: Rails session is only avaiable in controller or view and can use different storage mechanisms. It is a place to store data from first request that can be read from later requests.
+
+  Following are some storage mechanism for sessions in Rails
+  1. **ActionDispatch::Session::CookieStore** - stores everything on the client
+  2. **ActionDispatch::Session::CacheStore** - stores data in the Rails cache
+  3. **ActionDispatch::Session::ActiveRecordStore** - stores data in the database using Active Record.
+  1. **ActionDispatch::Session::MemCacheStore** - stores data in memcached cluster
